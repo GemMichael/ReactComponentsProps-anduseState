@@ -17,9 +17,7 @@ function App() {
   }
 
   return (
-    <>
-  
-      
+    <>   
       <div className="card">
       <p>Count: {count} </p>
       <button onClick={decrement} disabled={count === 0}>Decrement</button>
