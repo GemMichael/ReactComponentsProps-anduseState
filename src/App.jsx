@@ -1,30 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Header from './Header.jsx';
+import Counter from './Counter.jsx';
+import Footer from './Footer.jsx';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const decrement = () => {
-    if (count => 0) {
-      setCount(count - 1);
-    }
-  }
-
-  const increment = () => {
-      setCount(count + 1);
-  }
+  const [count, setCount] = useState(0);
 
   return (
-    <>   
-      <div className="card">
-      <p>Count: {count} </p>
-      <button onClick={decrement} disabled={count === 0}>Decrement</button>
-       <button onClick={increment}>Increment</button>
-      </div>
-    </>
+    <div className='container-fluid d-flex flex-column min-vh-100 bg-dark text-center text-white'>
+      <Header title="Your Title" count={count} />
+      <Counter count={count} setCount={setCount} />
+      <Footer copyright="Copyright © 2024 Developed by Gem Michael M. Nieva. All rights reserved." />
+    </div>
   );
 }
 
-export default App
+export default App;
+
