@@ -1,7 +1,7 @@
 function CountDisplay({ count }) {
     //Define style for displaying count
     const countStyle = {
-        fontSize: '2rem',
+        fontSize: '2em',
         fontWeight: 'bold'
     };
 
